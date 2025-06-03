@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini CRM Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Mini CRM Platform</h1>
+  <button class="google-login-btn" id="googleLoginBtn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Logo" />
+    Sign in with Google
+  </button>
+</header>
+
+<main>
+  <section id="segmentSection">
+    <h2>Create User Segment</h2>
+    <label for="segmentName">Segment Name</label>
+    <input type="text" id="segmentName" placeholder="Enter segment name" />
+    
+    <label for="segmentRule">Rule (example: age > 25)</label>
+    <input type="text" id="segmentRule" placeholder="e.g. location = 'USA'" />
+    
+    <button id="createSegmentBtn">Create Segment</button>
+    
+    <div id="segmentMessage" class="message"></div>
+  </section>
+  
+  <section id="campaignsSection">
+    <h2>Saved Campaigns</h2>
+    <ul class="campaign-list" id="campaignList"></ul>
+  </section>
+  
+  <section id="sendSection">
+    <h2>Simulate Sending Message</h2>
+    <label for="selectSegment">Select Segment</label>
+    <select id="selectSegment">
+      <option value="">-- Select Segment --</option>
+    </select>
+    
+    <label for="messageText">Message</label>
+    <textarea id="messageText" rows="3" placeholder="Type your message here..."></textarea>
+    
+    <button id="sendMsgBtn">Send Message</button>
+    
+    <div class="message-log" id="messageLog"></div>
+  </section>
+  
+  <section id="aiSection">
+    <h2>AI Message Generator (Mock)</h2>
+    <label for="aiPrompt">Enter prompt</label>
+    <input type="text" id="aiPrompt" placeholder="Write a prompt for AI message" />
+    <button id="generateAIMessageBtn">Generate AI Message</button>
+    <div class="ai-response" id="aiResponse"></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
